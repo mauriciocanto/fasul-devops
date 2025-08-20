@@ -20,3 +20,9 @@ jobs:
 
       - name: Rodar testes
         run: pytest -q
+
+      - name: Simular deploy
+        run: |
+          mkdir dist
+          cp app.py dist/
+          echo "Deploy concluído! Código copiado para dist/"
