@@ -19,4 +19,10 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install pytest; fi
 
       - name: Rodar testes
+
+      - name: Simular deploy
+        run: |
+          mkdir dist
+          cp app.py dist/
+          echo "Deploy concluído! Código copiado para dist/"
         run: pytest -q
